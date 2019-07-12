@@ -1,5 +1,4 @@
 const HwsLibTestApp = {
-    CONTENT_ID: "test-contents",
     DATA_KEY: "test-app",
     
     App: function() {
@@ -43,7 +42,6 @@ HwsLibTestApp.App.prototype.load = function() {
     const descriptionEle = document.getElementById("description");
     
     HWS.getUserData({
-	content_id: HwsLibTestApp.CONTENT_ID,
 	key: HwsLibTestApp.DATA_KEY,
 	success: function(data) {
 	    if(data) {
@@ -68,7 +66,6 @@ HwsLibTestApp.App.prototype.save = function(e) {
 	description: descriptionEle.value
     };
     HWS.setUserData({
-	content_id: HwsLibTestApp.CONTENT_ID,
 	key: HwsLibTestApp.DATA_KEY,
 	data: data,
 	success: function() {
