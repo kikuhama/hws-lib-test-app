@@ -50,7 +50,23 @@ HwsLibTestApp.App.prototype.load = function() {
 	    }
 	},
 	error: function(req, status, error) {
+            console.log(req, status, error);
 	}
+    });
+
+    HWS.setUserData({
+        key: HwsLibTestApp.DATA_KEY,
+        data: {
+            name: "foo",
+            description: "var",
+        },
+        success: function(data) {
+            if(data) {
+            }
+        },
+        error: function(req, status, error) {
+            console.log(req, status, error);
+        }
     });
 };
 
